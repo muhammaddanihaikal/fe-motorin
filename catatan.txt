@@ -1,0 +1,10 @@
+27/7/2024
+-sampe buat page laporan
+-sampe buat login register
+-sampe protect page dengan roleId
+-buat header rental
+-pasang sidebar penyewa
+-buat index page dan footer untuk main layout dan dashboard layout
+-buat page syarat dan ketentuan dan ganti hero image
+-nambahin filter bulan dan tanggal pesanan
+-ganti nav ke semula, lalu gambar nav agar bulat

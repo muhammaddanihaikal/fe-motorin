@@ -16,7 +16,7 @@ const Header = () => {
   const getRentalByUserId = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/rental?userId=${userId}`
+        `${import.meta.env.VITE_BE_BASE_URL}/api/rental?userId=${userId}`
       );
       const data = response.data;
 
@@ -34,7 +34,7 @@ const Header = () => {
   const getPenyewaByUserId = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/penyewa?userId=${userId}`
+        `${import.meta.env.VITE_BE_BASE_URL}/api/penyewa?userId=${userId}`
       );
       const data = response.data;
 

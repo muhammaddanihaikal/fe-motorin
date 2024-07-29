@@ -21,11 +21,11 @@ const SelectRole = ({ show, handleClose }) => {
             <Col>
               <Button
                 variant="secondary"
-                className="mb-3 w-100"
-                onClick={() => handleRoleSelection("2")}
+                className="w-100 mb-3"
+                onClick={() => handleRoleSelection("3")}
                 style={{ height: "40px", fontSize: "16px" }}
               >
-                Rental
+                Penyewa
               </Button>
             </Col>
           </Row>
@@ -34,10 +34,10 @@ const SelectRole = ({ show, handleClose }) => {
               <Button
                 variant="secondary"
                 className="w-100"
-                onClick={() => handleRoleSelection("3")}
+                onClick={() => handleRoleSelection("2")}
                 style={{ height: "40px", fontSize: "16px" }}
               >
-                Penyewa
+                Rental
               </Button>
             </Col>
           </Row>

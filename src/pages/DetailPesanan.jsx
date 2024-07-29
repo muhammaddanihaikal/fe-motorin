@@ -18,7 +18,7 @@ const DetailPesanan = () => {
   const getPesananByPesananId = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/pesanan?pesananId=${pesananId}`
+        `${import.meta.env.VITE_BE_BASE_URL}/api/pesanan?pesananId=${pesananId}`
       );
       const data = response.data;
       console.log(data);
@@ -43,7 +43,9 @@ const DetailPesanan = () => {
         window.open(urlPembayaran);
       } else {
         const response = await axios.post(
-          `http://localhost:3000/api/pembayaran?pesananId=${pesananId}`
+          `${
+            import.meta.env.VITE_BE_BASE_URL
+          }/api/pembayaran?pesananId=${pesananId}`
         );
         const data = response.data;
         console.log(data);

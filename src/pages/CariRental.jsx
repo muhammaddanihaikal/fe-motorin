@@ -15,7 +15,9 @@ const CariRental = () => {
 
   const getAllKota = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/kotas");
+      const response = await axios.get(
+        `${import.meta.env.VITE_BE_BASE_URL}/api/kotas`
+      );
       const data = response.data;
       //   console.log(data);
 
@@ -28,7 +30,7 @@ const CariRental = () => {
   const getRentalsByKotaId = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/rentals?kotaId=${kotaId}`
+        `${import.meta.env.VITE_BE_BASE_URL}/api/rentals?kotaId=${kotaId}`
       );
       const data = response.data;
       console.log(data);

@@ -29,6 +29,7 @@ const Pesanan = () => {
   const [durasi, setDurasi] = useState("0");
   const [totalHarga, setTotalHarga] = useState("0");
   const [penyewaId, setPenyewaId] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const userId = localStorage.getItem("userId");
   const roleId = localStorage.getItem("roleId");
@@ -94,6 +95,8 @@ const Pesanan = () => {
   const createPesanan = async (e) => {
     e.preventDefault(); // agar ga reload
 
+    setIsLoading(true);
+
     // console.log({
     //   motor,
     //   rental,
@@ -115,17 +118,20 @@ const Pesanan = () => {
 
     try {
       // tembak ke api
-      const response = await axios.post(`http://localhost:3000/api/pesanan`, {
-        tanggalMulai,
-        tanggalSelesai,
-        lokasiAmbil,
-        lokasiKembali,
-        waktuAmbil,
-        waktuKembali,
-        jaminanId,
-        penyewaId,
-        motorId,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_BE_BASE_URL}/api/pesanan`,
+        {
+          tanggalMulai,
+          tanggalSelesai,
+          lokasiAmbil,
+          lokasiKembali,
+          waktuAmbil,
+          waktuKembali,
+          jaminanId,
+          penyewaId,
+          motorId,
+        }
+      );
       const data = response.data;
 
       if (response.status === 201) {
@@ -135,6 +141,8 @@ const Pesanan = () => {
     } catch (error) {
       console.error("Error :" + error.message);
       alert(error.response.data.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -408,8 +416,13 @@ const Pesanan = () => {
               </Form.Control>
             </Form.Group>
 
-            <Button variant="primary" type="submit" className="mt-1 w-100">
-              Buat Pesanan
+            <Button
+              variant="primary"
+              type="submit"
+              className="mt-1 w-100"
+              disabled={isLoading}
+            >
+              {isLoading ? "Loading..." : "Buat Pesanan"}
             </Button>
           </Form>
         </Col>
@@ -433,7 +446,7 @@ const Pesanan = () => {
 
         */}
 
-          {motor && (
+          {motor && rental && (
             <Card>
               <Card.Img variant="top" src={motor.foto} />
               <Card.Body>

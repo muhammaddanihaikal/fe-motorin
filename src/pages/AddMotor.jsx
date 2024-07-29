@@ -31,7 +31,7 @@ const AddMotor = () => {
     try {
       // kirim data profil penyewa
       const response = await axios.post(
-        "http://localhost:3000/api/motor",
+        `${import.meta.env.VITE_BE_BASE_URL}/api/motor`,
         formData,
         {
           headers: {

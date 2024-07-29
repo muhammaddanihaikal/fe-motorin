@@ -39,7 +39,9 @@ const ProfilRental = () => {
 
   const getAllBank = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/banks");
+      const response = await axios.get(
+        `${import.meta.env.VITE_BE_BASE_URL}/api/banks`
+      );
       const data = response.data;
       console.log(data);
 
@@ -54,7 +56,7 @@ const ProfilRental = () => {
       console.log("userId nich : " + userId);
       // ambil data profil rental
       const response = await axios.get(
-        `http://localhost:3000/api/rental?userId=${userId}`
+        `${import.meta.env.VITE_BE_BASE_URL}/api/rental?userId=${userId}`
       );
       const data = response.data;
       console.log(data);
@@ -99,7 +101,7 @@ const ProfilRental = () => {
     try {
       // kirim data profil penyewa
       const response = await axios.put(
-        "http://localhost:3000/api/rental",
+        `${import.meta.env.VITE_BE_BASE_URL}/api/rental`,
         formData,
         {
           headers: {

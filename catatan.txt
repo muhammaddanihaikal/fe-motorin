@@ -1,4 +1,4 @@
-27/7/2024
+29/7/2024
 -sampe buat page laporan
 -sampe buat login register
 -sampe protect page dengan roleId
@@ -8,3 +8,4 @@
 -buat page syarat dan ketentuan dan ganti hero image
 -nambahin filter bulan dan tanggal pesanan
 -ganti nav ke semula, lalu gambar nav agar bulat
+-ganti be_base_url ke dinamis dan icon sama nama app

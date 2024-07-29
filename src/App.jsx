@@ -28,7 +28,7 @@ function App() {
         {/* Main Layout */}
         <Route path="/" Component={MainLayout}>
           <Route index Component={Home} />
-          <Route path="cari-rental" Component={CariRental} />
+          <Route path="cari-rental" element={<CariRental />} />
           <Route path="rental/:rentalId" Component={Rental} />
           <Route path="pesanan" Component={Pesanan} />
           <Route path="pesanan/:pesananId" Component={DetailPesanan} />

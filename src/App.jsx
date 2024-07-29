@@ -26,28 +26,28 @@ function App() {
     <div>
       <Routes>
         {/* Main Layout */}
-        <Route path="/" Component={MainLayout}>
-          <Route index Component={Home} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
           <Route path="cari-rental" element={<CariRental />} />
-          <Route path="rental/:rentalId" Component={Rental} />
-          <Route path="pesanan" Component={Pesanan} />
-          <Route path="pesanan/:pesananId" Component={DetailPesanan} />
-          <Route path="syarat-dan-ketentuan" Component={SyaratDanKetentuan} />
-          <Route path="rental/profil" Component={ProfilRental} />
-          <Route path="rental/pesanan" Component={PesananRental} />
-          <Route path="rental/motor/add" Component={AddMotor} />
-          <Route path="rental/motor/:motorId" Component={UpdateMotor} />
-          <Route path="rental/motor" Component={ListMotor} />
-          <Route path="rental/laporan" Component={LaporanPenjualan} />
-          <Route path="penyewa/pesanan" Component={PesananPenyewa} />
-          <Route path="penyewa/profil" Component={ProfilPenyewa} />
+          <Route path="rental/:rentalId" element={<Rental />} />
+          <Route path="pesanan" element={<Pesanan />} />
+          <Route path="pesanan/:pesananId" element={<DetailPesanan />} />
+          <Route path="syarat-dan-ketentuan" element={<SyaratDanKetentuan />} />
+          <Route path="rental/profil" element={<ProfilRental />} />
+          <Route path="rental/pesanan" element={<PesananRental />} />
+          <Route path="rental/motor/add" element={<AddMotor />} />
+          <Route path="rental/motor/:motorId" element={<UpdateMotor />} />
+          <Route path="rental/motor" element={<ListMotor />} />
+          <Route path="rental/laporan" element={<LaporanPenjualan />} />
+          <Route path="penyewa/pesanan" element={<PesananPenyewa />} />
+          <Route path="penyewa/profil" element={<ProfilPenyewa />} />
         </Route>
 
-        <Route path="/register" Component={Register} />
-        <Route path="/login" Component={Login} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
 
-        <Route path="/select-role" Component={SelectRole} />
-        <Route path="/card" Component={ContohCard} />
+        <Route path="/select-role" element={<SelectRole />} />
+        <Route path="/card" element={<ContohCard />} />
       </Routes>
     </div>
   );

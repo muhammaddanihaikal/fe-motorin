@@ -208,7 +208,7 @@ const Pesanan = () => {
 
     // set state jaminan
     getAllJaminan();
-  }, [motorId, rentalId]);
+  }, [motorId, rentalId, jaminanId]);
 
   // untuk perubahan tanggal
   useEffect(() => {

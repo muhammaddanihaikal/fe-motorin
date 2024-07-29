@@ -26,28 +26,28 @@ function App() {
     <div>
       <Routes>
         {/* Main Layout */}
-        <Route path="/" element={<MainLayout />}>
-          <Route index Component={Home}></Route>
+        <Route path="/" Component={MainLayout}>
+          <Route index Component={Home} />
           <Route path="cari-rental" Component={CariRental} />
           <Route path="rental/:rentalId" Component={Rental} />
           <Route path="pesanan" Component={Pesanan} />
           <Route path="pesanan/:pesananId" Component={DetailPesanan} />
           <Route path="syarat-dan-ketentuan" Component={SyaratDanKetentuan} />
-          <Route path="rental/profil" Component={ProfilRental}></Route>
-          <Route path="rental/pesanan" Component={PesananRental}></Route>
-          <Route path="rental/motor/add" Component={AddMotor}></Route>
-          <Route path="rental/motor/:motorId" Component={UpdateMotor}></Route>
-          <Route path="rental/motor" Component={ListMotor}></Route>
-          <Route path="rental/laporan" Component={LaporanPenjualan}></Route>
+          <Route path="rental/profil" Component={ProfilRental} />
+          <Route path="rental/pesanan" Component={PesananRental} />
+          <Route path="rental/motor/add" Component={AddMotor} />
+          <Route path="rental/motor/:motorId" Component={UpdateMotor} />
+          <Route path="rental/motor" Component={ListMotor} />
+          <Route path="rental/laporan" Component={LaporanPenjualan} />
           <Route path="penyewa/pesanan" Component={PesananPenyewa} />
-          <Route path="penyewa/profil" Component={ProfilPenyewa}></Route>
+          <Route path="penyewa/profil" Component={ProfilPenyewa} />
         </Route>
 
-        <Route path="/register" Component={Register}></Route>
-        <Route path="/login" Component={Login}></Route>
+        <Route path="/register" Component={Register} />
+        <Route path="/login" Component={Login} />
 
-        <Route path="/select-role" Component={SelectRole}></Route>
-        <Route path="/card" Component={ContohCard}></Route>
+        <Route path="/select-role" Component={SelectRole} />
+        <Route path="/card" Component={ContohCard} />
       </Routes>
     </div>
   );

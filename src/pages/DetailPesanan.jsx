@@ -174,7 +174,7 @@ const DetailPesanan = () => {
                   <h5>{formatTanggal(pesanan.tanggalMulai)}</h5>
                 </Col>
                 <Col>
-                  <small>Waktu</small>
+                  <small>Waktu Ambil</small>
                   <h5>{pesanan.waktuAmbil}</h5>
                 </Col>
               </Row>
@@ -193,13 +193,13 @@ const DetailPesanan = () => {
                   <h5>{formatTanggal(pesanan.tanggalSelesai)}</h5>
                 </Col>
                 <Col>
-                  <small>Waktu</small>
+                  <small>Waktu Kembali</small>
                   <h5>{pesanan.waktuKembali}</h5>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <small>Lokasi Ambil</small>
+                  <small>Lokasi Kembali</small>
                   <h5>{pesanan.lokasiKembali}</h5>
                 </Col>
               </Row>
